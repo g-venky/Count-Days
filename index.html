@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count days</title>
+    <style>
+                    input:valid {
+                         color: green;
+                        }
+                    input:invalid {
+                        color: red;
+                        }
+                        select{
+                            font-size: medium;
+                            font-weight: 200;
+                            
+                        }
+                        
+                        select:valid
+                        {
+                            color: green; 
+                        }
+                        select:invalid{
+                            color: red;
+                        }
+                        input[type=text]{
+                            font-size: medium;
+                            font-weight: 200;
+                        }
+            input[type=text],button ,select{
+                                width: 70%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                display: inline-block;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                box-sizing: border-box;
+                                cursor:pointer;
+                               
+                               
+                                
+                            }
+                            fieldset{
+                                width: 80%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                display: inline-block;
+                                border: 1px solid rgb(5, 66, 80);
+                                border-radius: 4px;
+                                box-sizing: border-box;  
+                                background-color: rgb(246, 243, 243);
+                            }
+                      button{
+                        background-color: rgb(9, 207, 134);
+                        cursor:pointer;
+                        width:80%;
+                      }     
+                     input[type=text]:focus {
+                        background-color: rgb(240, 245, 248);
+                        cursor:pointer;
+                        } 
+                        label{
+                            
+                            font-weight: bold;
+                            font-style: Monospace;
+                            
+                        }
+                        legend{
+                            background-color: rgb(119, 175, 231);
+                            padding: 12px 20px;
+                                margin: 8px 0;
+                        }
+                        a{
+                            padding: 12px 20px;
+                                margin: 8px 0;
+                        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; border: 1px solid rgb(5, 66, 80); " >
+        <div style="border: 1px solid rgb(5, 66, 80); background-color: rgb(119, 175, 231);" >
+            <h4 >Calculate how many days, months, and years are there between two dates?</h4>
+        </div>    
+        <fieldset>
+            <legend><strong>Enter Start Date</strong></legend>
+            <div style="text-align: left;">
+                <label for="dv">Date</label><br>
+                    <select id="dv"   >
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option> 
+                    </select>
+                <br>
+                <label for="mv">Month</label><br>
+                    <select id="mv"   >
+                        <option value="01">January--01</option>
+                        <option value="02">Feb--02</option>
+                        <option value="03">March--03</option>
+                        <option value="04">April--04</option>
+                        <option value="05">May--05</option>
+                        <option value="06">June--06</option>
+                        <option value="07">July--07</option>
+                        <option value="08">August--08</option>
+                        <option value="09">September--09</option>
+                        <option value="10">October--10</option>
+                        <option value="11">November--11</option>
+                        <option value="12">December--12</option>
+                    </select>
+                <br>
+                <label for="yv">Year</label><br>
+                    <input type="text" id="yv" name="yv" maxlength="4"  id="yvv" pattern="\d{4}" required  placeholder="ex:1996" >
+                <br>
+            </div> 
+            <P>OR</P>
+            <div style="text-align: left;">
+                <input type="checkbox" id="tod" name="tod" value="toda">
+                <label for="tod">Today</label>
+            </div>    
+        </fieldset>
+        <fieldset>
+            <legend><strong>Enter End Date</strong></legend>
+            <div style="text-align: left;">
+                <label for="dvv">Date</label><br>
+                     <select id="dvv"   >
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option> 
+                    </select>
+                    <br>
+                <label for="mvv">Month</label><br>
+                    <select id="mvv"   >
+                        <option value="01">January--01</option>
+                        <option value="02">Feb--02</option>
+                        <option value="03">March--03</option>
+                        <option value="04">April--04</option>
+                        <option value="05">May--05</option>
+                        <option value="06">June--06</option>
+                        <option value="07">July--07</option>
+                        <option value="08">August--08</option>
+                        <option value="09">September--09</option>
+                        <option value="10">October--10</option>
+                        <option value="11">November--11</option>
+                        <option value="12">December--12</option>
+                    </select>
+                <br>
+                <label for="yvv">Year</label><br>
+                    <input type="text"  name="yvv" maxlength="4"  id="yvv" pattern="\d{4}" required placeholder="ex:2022">
+                <br>
+            </div>
+            <P>OR</P>
+            <div style="text-align: left;">
+                <input type="checkbox" id="to" name="to" value="today">
+                <label for="to">Today</label>
+            </div>       
+        </fieldset >
+        <br>
+        <button id="button " onclick="days()"><strong>Calculate Duration</strong></button>
+        <br>
+        <fieldset>
+            <legend><strong >Result:</strong></legend>
+            <div style="text-align: left;">
+                <p id="demo"></p>
+            </div>    
+        </fieldset>
+        <div style="border: 1px solid rgb(5, 66, 80); background-color: rgb(119, 175, 231);">
+            <h5>Powered by <a href="https://github.com/g-venky" title="Venky" target="_blank" style="background-color: white;" >Venky</a></h5>
+        </div>    
+    </div>
+    <script>
+        function days()
+        {
+            
+            //document.getElementById('demo').innerHTML= t;
+            var st=document.getElementById('tod').checked;
+            if (st==true)
+            {
+                var b= new Date();
+                var ds=b.getDate();
+                var ms=b.getMonth()+1;
+                var ys=b.getFullYear();
+
+            }
+            else
+            {
+                var dss= document.getElementById('dv');
+                var ds= Number((dss.options[dss.selectedIndex].value));
+                var mss= document.getElementById('mv');
+                var ms=Number((mss.options[mss.selectedIndex].value));
+                var ys=Number(document.getElementById('yv').value);
+            }
+            var t=document.getElementById('to').checked;
+            if (t==true)
+            {
+                var c= new Date();
+                var de=c.getDate();
+                var me=c.getMonth()+1;
+                var ye=c.getFullYear();
+
+            }
+            else
+            {
+                var dee= document.getElementById('dvv');
+                var de= Number((dee.options[dee.selectedIndex].value));
+                var mee=document.getElementById('mvv');
+                var me=Number((mee.options[mee.selectedIndex].value));
+                var ye=Number(document.getElementById('yvv').value);
+            }
+            
+            if( ys== 0 || ye==0 )
+            {
+                document.getElementById('demo').innerHTML='Please chcek if You have entered valid start year and end year';
+            }
+            else  if (ys>ye)
+            {
+                 
+                document.getElementById('demo').innerHTML= 'Note: start date year should be less than end date year example: start year : 1996 and end year :2022';
+                
+            }
+            else if(ys==ye && ms>me)
+            {
+              
+                document.getElementById('demo').innerHTML='please enter the higher date value in end date column'  ;
+                
+            }
+            else if (ys==ye && ms==me && ds>de)
+            {
+                document.getElementById('demo').innerHTML='please enter the higher date value in end date column' ;
+              
+            }
+         //document.getElementById('demo').innerHTML= ys;
+    /*      var c= new Date();
+            var d=c.getDate();
+            var m=c.getMonth();
+            var y=c.getFullYear();
+    */
+            else  if (de > ds && me>ms)
+            {
+                 dr=de-ds;
+                 mr=me-ms;
+                 yr=ye-ys;
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de< ds && me<ms)
+            {
+                if ( me ==1 ||me ==2|| me==4|| me==6||me ==8||me ==9||me==11)
+                {
+                    dr=(de+31)-ds;
+                }
+                if (me==5||me==7||me ==10||me==12)
+                {
+                    dr=(de+30)-ds;
+                }
+                if (me ==3)
+                {
+                    if ((ye%4)==0)
+                    {
+                    dr=(de+29)-ds;
+                    }
+                    else
+                    {
+                        dr=(de+28)-ds;
+                    }
+                }
+                
+                 mr=(me+11)-ms;
+                yr=(ye-1)-ys;
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de < ds && me>ms)
+            {
+                if ( me ==1 ||me ==2|| me==4|| me==6||me ==8||me ==9||me==11)
+                {
+                    dr=(de+31)-ds;
+                }
+                if (me==5||me==7||me ==10||me==12)
+                {
+                    dr=(de+30)-ds;
+                }
+                if (me ==3)
+                {
+                    if ((ye%4)==0)
+                    {
+                    dr=(de+29)-ds;
+                    }
+                    else
+                    {
+                        dr=(de+28)-ds;
+                    }
+                }
+                 mr=me-1-ms;
+                 yr=ye-ys;
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de > ds && me<ms)
+            {
+                dr=((de)-(ds));
+                 mr=me+12-ms;
+                 yr=((ye-1)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de == ds && me>ms)
+            {
+                 dr=((de)-(ds));
+                 mr=((me)-(ms));
+                 yr=((ye)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }    
+            else if (de == ds && me<ms)
+            {
+                 dr=((de)-(ds));
+                 mr=((me+12)-(ms));
+                yr=((ye-1)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de > ds && me==ms)
+            {
+                 dr=((de)-(ds));
+                mr=((me)-(ms));
+                yr=((ye)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if  (de < ds && me==ms)
+            {
+                if ( me ==1 ||me ==2|| me==4|| me==6||me ==8||me ==9||me==11)
+                {
+                    dr=(de+31)-ds;
+                }
+                if (me==5||me==7||me ==10||me==12)
+                {
+                    dr=(de+30)-ds;
+                }
+                if (me ==3)
+                {
+                    if ((ye%4)==0)
+                    {
+                    dr=(de+29)-ds;
+                    }
+                    else
+                    {
+                        dr=(de+28)-ds;
+                    }
+                }
+                mr=((me+11)-(ms));
+                yr=((ye-1)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else if (de == ds && me==ms)
+            {
+                 dr=((de)-(ds));
+                mr=((me)-(ms));
+                yr=((ye)-(ys));
+                document.getElementById('demo').innerHTML= dr +" " +'Days' + ' & '+ mr +" "+'Months'+' & ' +yr +" "+'Years';
+            }
+            else
+            {
+                document.getElementById('demo').innerHTML='Please Enter valid start date and end date';
+            }
+   
+        }
+    </script>
+   
+</body>
+</html>
